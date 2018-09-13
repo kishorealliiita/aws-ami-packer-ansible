@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "AKIAJUXPTM73IDDSDSAA",
+      "secret_key": "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",
+      "region": "ap-southeast-2",
+      "source_ami": "ami-0c4c0b396b01f9aea",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "packer-ami-test-kishore"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "provision.sh"
+    }
+  ]
+}
